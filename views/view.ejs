@@ -1,0 +1,14 @@
+<%- include('./partials/header') %>
+
+<h1>View all the photos here.</h1>
+
+<% if(items){ %>
+   <% items.forEach(function(item){ %>
+        <img src="<%= item.image %>" alt="An image">
+        <h1><%= item.name %></h1>
+   <% }); %>
+<% } %>
+
+<a href="/image/new">Upload a new one</a>
+
+<%- include('./partials/footer') %>
